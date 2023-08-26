@@ -1,0 +1,118 @@
+#skateGrid {
+    position: relative;
+
+}
+
+#skatesTable {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 30%;
+    height: 60%;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+#cellNum100 {
+    padding: 5px;
+}
+
+
+.btn {
+
+    border: none;
+
+    background: none;
+
+    box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.1);
+
+    cursor: pointer;
+
+    font-size: 1.5rem;
+
+    font-family: 'Dosis', sans-serif;
+
+    margin: 0 1rem;
+
+    padding: .25rem 2rem;
+
+    transition: all .25s ease-in-out;
+
+}
+
+.btn:focus,
+.btn:hover {
+
+    box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.2);
+
+}
+
+
+.btn-normal {
+    width: 330px;
+    height: 100px;
+
+    background: #009879;
+
+    color: white;
+
+    border-radius: 15px;
+
+    right: 0;
+    bottom: 25px;
+    position: absolute;
+
+}
+
+.btn-normal:hover {
+
+    background: hsl(0, 0%, 88%);
+
+    color: #009879;
+
+}
+
+#div_btn {
+    position: relative;
+
+}
+
+#customersTable {
+    width: 68%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#customersTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+}
+
+#customersTable th,
+#customersTable td  {
+    padding: 12px 15px;
+}
+
+#customersTable tbody tr ,#skatesTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#customersTable tbody tr:nth-of-type(even),#skatesTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#customersTable tbody tr:last-of-type ,#skatesTable tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+}
+
+#customersTable tbody tr.active-row ,#skatesTable tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
