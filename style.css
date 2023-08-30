@@ -67,7 +67,8 @@ td {
 
 }
 
-.btn-normal:hover {
+.btn-normal:hover,
+.formContainer .btn:hover {
 
     background: hsl(0, 0%, 88%);
 
@@ -96,23 +97,89 @@ td {
 }
 
 #customersTable th,
-#customersTable td  {
+#customersTable td {
     padding: 12px 15px;
 }
 
-#customersTable tbody tr ,#skatesTable tbody tr {
+#customersTable tbody tr,
+#skatesTable tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
-#customersTable tbody tr:nth-of-type(even),#skatesTable tbody tr:nth-of-type(even) {
+#customersTable tbody tr:nth-of-type(even),
+#skatesTable tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-#customersTable tbody tr:last-of-type ,#skatesTable tbody tr:last-of-type{
+#customersTable tbody tr:last-of-type
+
+/*#skatesTable tbody tr:last-of-type*/
+    {
     border-bottom: 2px solid #009879;
 }
 
-#customersTable tbody tr.active-row ,#skatesTable tbody tr.active-row {
+#customersTable tbody tr.active-row,
+#skatesTable tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+
+.Popup {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.formPopup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 5%);
+    border: 3px solid #999999;
+    z-index: 9;
+}
+
+.formContainer {
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.formContainer input[type=text],
+.formContainer input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eee;
+    transform: translate(-2.5%);
+    border-radius: 25px;
+}
+
+.formContainer input[type=text]:focus,
+.formContainer input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.formContainer .btn {
+    transform: translate(-2.5%);
+    padding: 12px 20px;
+    border: none;
+    background-color: #009879;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+/*زرار القفل بتاع الفورم*/
+.formContainer .close {
+    cursor: pointer;
+    color: #009879;
+    font-size: 300%;
+    font-weight: bold;
 }
