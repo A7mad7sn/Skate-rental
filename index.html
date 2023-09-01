@@ -163,7 +163,10 @@
                     <strong>Name</strong>
                 </label>
                 <input type="text" id="custName" placeholder="Your Name" name="custName" required>
-                <button class="btn" onclick="navigateToNextPage('nameForm','reqSkatesForm')">Next</button>
+                <button class="btn" id="nextBtn" onclick="navigateToNextPage('nameForm','reqSkatesForm')">Next</button><br>
+                <div class="loading-container">
+                    <div class="loading-symbol"></div>
+                </div>
             </form>
         </div>
     </div>
@@ -176,13 +179,16 @@
                 <h2>Adding a Customer</h2>
                 <label for="reqSkates">
                     <strong>Required Skates</strong>
-                </label>
+                </label><br>
                 <select id="reqSkates">
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                </select>
+                    <option value="option1">Skate#1</option>
+                    <option value="option2">Skate#2</option>
+                    <option value="option3">Skate#3</option>
+                </select><br><br>
                 <button class="btn" onclick="navigateToNextPage('reqSkatesForm','timeForm')">Next</button>
+                <div class="loading-container">
+                    <div class="loading-symbol"></div>
+                </div>
             </form>
         </div>
     </div>
@@ -193,11 +199,23 @@
             <form class="formContainer">
                 <span class="close" onclick="closeForm('timeForm')">&times;</span>
                 <h2>Adding a Customer</h2>
-                <label for="time">
+                <label>
                     <strong>Time</strong>
-                </label>
-                <input type="text" id="time" placeholder="in minutes e.g 30|60|120" name="time" required>
+                </label><br>
+                <input type="radio" id="30min" name="time" value="30">
+                <label for="30min">30 Min.</label><br>
+                <input type="radio" id="60min" name="time" value="60">
+                <label for="60min">60 Min.</label><br>
+                <input type="radio" id="90min" name="time" value="90">
+                <label for="90min">90 Min.</label><br>
+                <input type="radio" id="120min" name="time" value="120">
+                <label for="120min">120 Min.</label><br>
+                <input type="radio" id="open" name="time" value="open">
+                <label for="open">Open.</label><br>
                 <button class="btn" onclick="navigateToNextPage('timeForm','mortageForm')">Next</button>
+                <div class="loading-container">
+                    <div class="loading-symbol"></div>
+                </div>
             </form>
         </div>
     </div>
@@ -212,7 +230,10 @@
                     <strong>Mortage</strong>
                 </label>
                 <input type="text" id="mortage" placeholder="e.g ID|Phone" name="mortage" required>
-                <button class="btn" onclick="navigateToNextPage('mortageForm','nameForm')">Next</button>
+                <button class="btn" onclick="closeForm('mortageForm')">Next</button>
+                <div class="loading-container">
+                    <div class="loading-symbol"></div>
+                </div>
             </form>
         </div>
     </div>

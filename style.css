@@ -68,7 +68,8 @@ td {
 }
 
 .btn-normal:hover,
-.formContainer .btn:hover {
+.formContainer .btn:hover
+{
 
     background: hsl(0, 0%, 88%);
 
@@ -182,4 +183,42 @@ td {
     color: #009879;
     font-size: 300%;
     font-weight: bold;
+}
+
+.formContainer .close:hover{
+    color: red;
+}
+
+
+#reqSkates{
+    border-radius: 20px;
+    background-color: yellow;
+    height: 8%;
+    width: 55%;
+}
+
+
+/*Loading identicator*/
+.loading-container {
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-symbol {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #009879;
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
