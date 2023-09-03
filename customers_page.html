@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers Page</title>
+    <style>
+        @import url("style.css");
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html" onclick="saveDataToLocalStorage()">Skates</a></li>
+        <li style="background: #000;"><a href="customers_page.html" onclick="saveDataToLocalStorage()">Customers</a></li>
+        <li><a href="about_us.html" onclick="saveDataToLocalStorage()">About Us</a></li>
+    </ul><br>
+    <h1>Customers</h1>
+    <table border="1px" id="customersTable">
+        <thead>
+            <tr>
+                <th>
+                    Customer Name
+                </th>
+                <th>
+                    Skate Number
+                </th>
+                <th>
+                    Mortage
+                </th>
+                <th>
+                    Time
+                </th>
+                <th>
+                    Start Time
+                </th>
+                <th>
+                    End Time
+                </th>
+                <th>
+                    delete
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <div id="btn_div">
+        <button class="btn btn-normal" id="addCustBtn" onclick="openForm()">add Customer</button>
+    </div>
+    <!--Name Form-->
+    <div class="Popup">
+        <div class="formPopup" id="nameForm">
+            <div class="formContainer">
+                <span class="close" onclick="closeForm('nameForm')">&times;</span>
+                <h2>Adding a Customer</h2>
+                <label for="custName">
+                    <strong>Name</strong>
+                </label>
+                <input type="text" id="custName" placeholder="Your Name" name="custName" required>
+                <button class="btn" id="nextBtn"
+                    onclick="navigateToNextPage('nameForm','reqSkatesForm')">Next</button><br>
+                <div class="loading-container">
+                    <div class="loading-symbol"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Required skates Form-->
+    <div class="Popup">
+        <div class="formPopup" id="reqSkatesForm">
+            <div class="formContainer">
+                <span class="close" onclick="closeForm('reqSkatesForm')">&times;</span>
+                <h2>Adding a Customer</h2>
+                <label for="reqSkates">
+                    <strong>Required Skates</strong>
+                </label><br>
+                <select id="reqSkates">
+                    <option value="Skate#1">Skate#1</option>
+                    <option value="Skate#2">Skate#2</option>
+                    <option value="Skate#3">Skate#3</option>
+                    <option value="Skate#4">Skate#4</option>
+                    <option value="Skate#5">Skate#5</option>
+                    <option value="Skate#6">Skate#6</option>
+                    <option value="Skate#7">Skate#7</option>
+                    <option value="Skate#8">Skate#8</option>
+                    <option value="Skate#9">Skate#9</option>
+                    <option value="Skate#10">Skate#10</option>
+
+                    <option value="Skate#11">Skate#11</option>
+                    <option value="Skate#12">Skate#12</option>
+                    <option value="Skate#13">Skate#13</option>
+                    <option value="Skate#14">Skate#14</option>
+                    <option value="Skate#15">Skate#15</option>
+                    <option value="Skate#16">Skate#16</option>
+                    <option value="Skate#17">Skate#17</option>
+                    <option value="Skate#18">Skate#18</option>
+                    <option value="Skate#19">Skate#19</option>
+                    <option value="Skate#20">Skate#20</option>
+
+                    <option value="Skate#21">Skate#21</option>
+                    <option value="Skate#22">Skate#22</option>
+                    <option value="Skate#23">Skate#23</option>
+                    <option value="Skate#24">Skate#24</option>
+                    <option value="Skate#25">Skate#25</option>
+                    <option value="Skate#26">Skate#26</option>
+                    <option value="Skate#27">Skate#27</option>
+                    <option value="Skate#28">Skate#28</option>
+                    <option value="Skate#29">Skate#29</option>
+                    <option value="Skate#30">Skate#30</option>
+
+                    <option value="Skate#31">Skate#31</option>
+                    <option value="Skate#32">Skate#32</option>
+                    <option value="Skate#33">Skate#33</option>
+                    <option value="Skate#34">Skate#34</option>
+                    <option value="Skate#35">Skate#35</option>
+                    <option value="Skate#36">Skate#36</option>
+                    <option value="Skate#37">Skate#37</option>
+                    <option value="Skate#38">Skate#38</option>
+                    <option value="Skate#39">Skate#39</option>
+                    <option value="Skate#40">Skate#40</option>
+
+                    <option value="Skate#41">Skate#41</option>
+                    <option value="Skate#42">Skate#42</option>
+                    <option value="Skate#43">Skate#43</option>
+                    <option value="Skate#44">Skate#44</option>
+                    <option value="Skate#45">Skate#45</option>
+                    <option value="Skate#46">Skate#46</option>
+                    <option value="Skate#47">Skate#47</option>
+                    <option value="Skate#48">Skate#48</option>
+                    <option value="Skate#49">Skate#49</option>
+                    <option value="Skate#50">Skate#50</option>
+
+                    <option value="Skate#51">Skate#51</option>
+                    <option value="Skate#52">Skate#52</option>
+                    <option value="Skate#53">Skate#53</option>
+                    <option value="Skate#54">Skate#54</option>
+                    <option value="Skate#55">Skate#55</option>
+                    <option value="Skate#56">Skate#56</option>
+                    <option value="Skate#57">Skate#57</option>
+                    <option value="Skate#58">Skate#58</option>
+                    <option value="Skate#59">Skate#59</option>
+                    <option value="Skate#60">Skate#60</option>
+
+                    <option value="Skate#61">Skate#61</option>
+                    <option value="Skate#62">Skate#62</option>
+                    <option value="Skate#63">Skate#63</option>
+                    <option value="Skate#64">Skate#64</option>
+                    <option value="Skate#65">Skate#65</option>
+                    <option value="Skate#66">Skate#66</option>
+                    <option value="Skate#67">Skate#67</option>
+                    <option value="Skate#68">Skate#68</option>
+                    <option value="Skate#69">Skate#69</option>
+                    <option value="Skate#70">Skate#70</option>
+
+                    <option value="Skate#71">Skate#71</option>
+                    <option value="Skate#72">Skate#72</option>
+                    <option value="Skate#73">Skate#73</option>
+                    <option value="Skate#74">Skate#74</option>
+                    <option value="Skate#75">Skate#75</option>
+                    <option value="Skate#76">Skate#76</option>
+                    <option value="Skate#77">Skate#77</option>
+                    <option value="Skate#78">Skate#78</option>
+                    <option value="Skate#79">Skate#79</option>
+                    <option value="Skate#80">Skate#80</option>
+
+                    <option value="Skate#81">Skate#81</option>
+                    <option value="Skate#82">Skate#82</option>
+                    <option value="Skate#83">Skate#83</option>
+                    <option value="Skate#84">Skate#84</option>
+                    <option value="Skate#85">Skate#85</option>
+                    <option value="Skate#86">Skate#86</option>
+                    <option value="Skate#87">Skate#87</option>
+                    <option value="Skate#88">Skate#88</option>
+                    <option value="Skate#89">Skate#89</option>
+                    <option value="Skate#90">Skate#90</option>
+
+                    <option value="Skate#91">Skate#91</option>
+                    <option value="Skate#92">Skate#92</option>
+                    <option value="Skate#93">Skate#93</option>
+                    <option value="Skate#94">Skate#94</option>
+                    <option value="Skate#95">Skate#95</option>
+                    <option value="Skate#96">Skate#96</option>
+                    <option value="Skate#97">Skate#97</option>
+                    <option value="Skate#98">Skate#98</option>
+                    <option value="Skate#99">Skate#99</option>
+                    <option value="Skate#100">Skate#100</option>
+                </select><br><br>
+                <button class="btn" onclick="navigateToNextPage('reqSkatesForm','mortageForm')">Next</button>
+                <div class="loading-container">
+                    <div class="loading-symbol"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mortage Form -->
+    <div class="Popup">
+        <div class="formPopup" id="mortageForm">
+            <div class="formContainer">
+                <span class="close" onclick="closeForm('mortageForm')">&times;</span>
+                <h2>Adding a Customer</h2>
+                <label for="mortage">
+                    <strong>Mortage</strong>
+                </label>
+                <input type="text" id="mortage" placeholder="e.g ID|Phone" name="mortage" required>
+                <button class="btn" onclick="navigateToNextPage('mortageForm', 'timeForm')">Next</button>
+                <div class="loading-container">
+                    <div class="loading-symbol"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Time Form -->
+    <div class="Popup">
+        <div class="formPopup" id="timeForm">
+            <div class="formContainer">
+                <span class="close" onclick="closeForm('timeForm')">&times;</span>
+                <h2>Adding a Customer</h2>
+                <label>
+                    <strong>Time</strong>
+                </label><br>
+                <input type="radio" id="30min" name="time" value="30" checked>
+                <label for="30min">30 Min.</label><br>
+                <input type="radio" id="60min" name="time" value="60">
+                <label for="60min">60 Min.</label><br>
+                <input type="radio" id="90min" name="time" value="90">
+                <label for="90min">90 Min.</label><br>
+                <input type="radio" id="120min" name="time" value="120">
+                <label for="120min">120 Min.</label><br>
+                <input type="radio" id="open" name="time" value="open">
+                <label for="open">Open.</label><br>
+                <button class="btn" onclick="closeForm('timeForm')">Finish</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

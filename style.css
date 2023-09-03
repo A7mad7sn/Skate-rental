@@ -1,224 +1,330 @@
-#skateGrid {
-    position: relative;
+*{
+  padding: 0;
+  margin: 0;
+}
 
+#skateGrid {
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 #skatesTable {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    width: 30%;
-    height: 60%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 95%;
+  height: 60%;
+  align-self: stretch;
 }
 
 td {
-    padding: 8px;
-    text-align: center;
+  padding: 8px;
+  text-align: center;
 }
 
 #cellNum100 {
-    padding: 5px;
+  padding: 5px;
 }
-
 
 .btn {
 
-    border: none;
+  border: none;
 
-    background: none;
+  background: none;
 
-    box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.1);
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.1);
 
-    cursor: pointer;
+  cursor: pointer;
 
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 
-    font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
 
-    margin: 0 1rem;
+  margin: 0 1rem;
 
-    padding: .25rem 2rem;
+  padding: 0.25rem 2rem;
 
-    transition: all .25s ease-in-out;
-
+  transition: all 0.25s ease-in-out;
 }
 
 .btn:focus,
 .btn:hover {
-
-    box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.2);
-
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.2);
 }
 
+.btn-normal{
 
-.btn-normal {
-    width: 330px;
-    height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 
-    background: #009879;
+  width: 330px;
+  height: 100px;
 
-    color: white;
+  background: #009879;
 
-    border-radius: 15px;
+  color: white;
 
-    right: 0;
-    bottom: 25px;
-    position: absolute;
+  border-radius: 15px;
 
+
+  position: relative;
 }
 
 .btn-normal:hover,
-.formContainer .btn:hover
-{
+.formContainer .btn:hover {
+  background: hsl(0, 0%, 88%);
 
-    background: hsl(0, 0%, 88%);
-
-    color: #009879;
-
+  color: #009879;
 }
 
 #div_btn {
-    position: relative;
-
+  position: relative;
 }
 
 #customersTable {
-    width: 68%;
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 #customersTable thead tr {
-    background-color: #009879;
-    color: #ffffff;
+  background-color: #009879;
+  color: #ffffff;
 }
 
 #customersTable th,
 #customersTable td {
-    padding: 12px 15px;
+  padding: 12px 15px;
 }
 
 #customersTable tbody tr,
 #skatesTable tbody tr {
-    border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 #customersTable tbody tr:nth-of-type(even),
 #skatesTable tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 #customersTable tbody tr:last-of-type
 
-/*#skatesTable tbody tr:last-of-type*/
-    {
-    border-bottom: 2px solid #009879;
+/*#skatesTable tbody tr:last-of-type*/ {
+  border-bottom: 2px solid #009879;
 }
 
 #customersTable tbody tr.active-row,
 #skatesTable tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
+  font-weight: bold;
+  color: #009879;
 }
 
 .Popup {
-    position: relative;
-    text-align: center;
-    width: 100%;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 
 .formPopup {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 5%;
-    transform: translate(-50%, 5%);
-    border: 3px solid #999999;
-    z-index: 9;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 5%);
+  border: 3px solid #999999;
+  z-index: 9;
 }
 
 .formContainer {
-    width: 500px;
-    height: 300px;
-    padding: 50px;
-    background-color: #fff;
+  width: 500px;
+  height: 300px;
+  padding: 50px;
+  background-color: #fff;
 }
 
-.formContainer input[type=text],
-.formContainer input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 20px 0;
-    border: none;
-    background: #eee;
-    transform: translate(-2.5%);
-    border-radius: 25px;
+.formContainer input[type="text"],
+.formContainer input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #eee;
+  transform: translate(-2.5%);
+  border-radius: 25px;
 }
 
-.formContainer input[type=text]:focus,
-.formContainer input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
+.formContainer input[type="text"]:focus,
+.formContainer input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
 }
 
 .formContainer .btn {
-    transform: translate(-2.5%);
-    padding: 12px 20px;
-    border: none;
-    background-color: #009879;
-    color: #fff;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 15px;
-    opacity: 0.8;
+  transform: translate(-2.5%);
+  padding: 12px 20px;
+  border: none;
+  background-color: #009879;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+  opacity: 0.8;
 }
 
 /*زرار القفل بتاع الفورم*/
 .formContainer .close {
-    cursor: pointer;
-    color: #009879;
-    font-size: 300%;
-    font-weight: bold;
+  cursor: pointer;
+  color: #009879;
+  font-size: 300%;
+  font-weight: bold;
 }
 
-.formContainer .close:hover{
-    color: red;
+.formContainer .close:hover {
+  color: red;
 }
 
-
-#reqSkates{
-    border-radius: 20px;
-    background-color: yellow;
-    height: 8%;
-    width: 55%;
+#reqSkates {
+  border-radius: 20px;
+  background-color: yellow;
+  height: 8%;
+  width: 55%;
 }
-
 
 /*Loading identicator*/
 .loading-container {
-    display:none;
-    align-items: center;
-    justify-content: center;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .loading-symbol {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #009879;
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s infinite linear;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #009879;
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s infinite linear;
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
+.delete-btn {
+  background: #009879;
+  color: white;
+}
+.delete-btn:hover{
+  background: red;
+}
+
+/*image slider*/
+
+.container{
+  padding: 0.5rem;
+  background: #009879;
+}
+
+.slider-wrapper{
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  overflow: hidden;
+}
+.slider{
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  
+}
+
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  animation: slide 10s infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  
+  33.33% {
+    transform: translateX(-100%);
+  }
+  
+  66.66% {
+    transform: translateX(-200%);
+  }
+}
+
+.slider-nav{
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  
+}
+
+.slider-nav a{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  
+}
+
+.slider-nav a:hover{
+  opacity: 1;
+}
+
+/*menu*/
+ul{
+  list-style: none;
+  background: red;
+}
+
+ul li{
+  display: inline-block;
+  position: relative;
+}
+
+ul li a{
+  display: block;
+  padding: 20px 25px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+}
+ul li a:hover{
+  background: #880808;
+}
+
+
+
+
+
+

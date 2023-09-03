@@ -12,7 +12,31 @@
 </head>
 
 <body>
-
+    <ul>
+        <li style="background: #000;"><a href="index.html" onclick="saveDataToLocalStorage()">Skates</a></li>
+        <li><a href="customers_page.html" onclick="saveDataToLocalStorage()">Customers</a></li>
+        <li><a href="about_us.html" onclick="saveDataToLocalStorage()">About Us</a></li>
+    </ul>
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="img1" src="1.jpg">
+                <img id="img2" src="2.jpg">
+                <img id="img3" src="3.jpg">
+            </div>
+            <div class="slider-nav">
+                <a href="#img1"></a>
+                <a href="#img2"></a>
+                <a href="#img3"></a>
+            </div>
+        </div>
+    </section>
+    
+    <br>
+    <hr color="red" size="2px">
+    <br>
+    <h1>Skates Grid</h1>
+    <br>
     <div id="skatesGrid">
         <table border="1px" ; id="skatesTable">
 
@@ -144,148 +168,19 @@
                     <td>97</td>
                     <td>98</td>
                     <td>99</td>
-                    <td>100</td>
+                    <td id="cellNum100">100</td>
                 </tr>
         </table>
     </div>
-    <div id="btn_div">
-        <button class="btn btn-normal" id="addCustBtn" onclick="openForm()">add Customer</button>
-    </div>
+    <br>
 
 
-    <!--Name Form-->
-    <div class="Popup">
-        <div class="formPopup" id="nameForm">
-            <form class="formContainer">
-                <span class="close" onclick="closeForm('nameForm')">&times;</span>
-                <h2>Adding a Customer</h2>
-                <label for="custName">
-                    <strong>Name</strong>
-                </label>
-                <input type="text" id="custName" placeholder="Your Name" name="custName" required>
-                <button class="btn" id="nextBtn" onclick="navigateToNextPage('nameForm','reqSkatesForm')">Next</button><br>
-                <div class="loading-container">
-                    <div class="loading-symbol"></div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!--Required skates Form-->
-    <div class="Popup">
-        <div class="formPopup" id="reqSkatesForm">
-            <form class="formContainer">
-                <span class="close" onclick="closeForm('reqSkatesForm')">&times;</span>
-                <h2>Adding a Customer</h2>
-                <label for="reqSkates">
-                    <strong>Required Skates</strong>
-                </label><br>
-                <select id="reqSkates">
-                    <option value="option1">Skate#1</option>
-                    <option value="option2">Skate#2</option>
-                    <option value="option3">Skate#3</option>
-                </select><br><br>
-                <button class="btn" onclick="navigateToNextPage('reqSkatesForm','timeForm')">Next</button>
-                <div class="loading-container">
-                    <div class="loading-symbol"></div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!--Time Form-->
-    <div class="Popup">
-        <div class="formPopup" id="timeForm">
-            <form class="formContainer">
-                <span class="close" onclick="closeForm('timeForm')">&times;</span>
-                <h2>Adding a Customer</h2>
-                <label>
-                    <strong>Time</strong>
-                </label><br>
-                <input type="radio" id="30min" name="time" value="30">
-                <label for="30min">30 Min.</label><br>
-                <input type="radio" id="60min" name="time" value="60">
-                <label for="60min">60 Min.</label><br>
-                <input type="radio" id="90min" name="time" value="90">
-                <label for="90min">90 Min.</label><br>
-                <input type="radio" id="120min" name="time" value="120">
-                <label for="120min">120 Min.</label><br>
-                <input type="radio" id="open" name="time" value="open">
-                <label for="open">Open.</label><br>
-                <button class="btn" onclick="navigateToNextPage('timeForm','mortageForm')">Next</button>
-                <div class="loading-container">
-                    <div class="loading-symbol"></div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!--Mortage Form-->
-    <div class="Popup">
-        <div class="formPopup" id="mortageForm">
-            <form class="formContainer">
-                <span class="close" onclick="closeForm('mortageForm')">&times;</span>
-                <h2>Adding a Customer</h2>
-                <label for="mortage">
-                    <strong>Mortage</strong>
-                </label>
-                <input type="text" id="mortage" placeholder="e.g ID|Phone" name="mortage" required>
-                <button class="btn" onclick="closeForm('mortageForm')">Next</button>
-                <div class="loading-container">
-                    <div class="loading-symbol"></div>
-                </div>
-            </form>
-        </div>
-    </div>
+    
 
 
 
-    <table border="1px" id="customersTable">
-        <thead>
-            <tr>
-                <th>
-                    Customer Name
-                </th>
-                <th>
-                    Skates Number
-                </th>
-                <th>
-                    Time
-                </th>
-                <th>
-                    Start Time
-                </th>
-                <th>
-                    Mortage
-                </th>
-                <th>
-                    Time left
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    Mohamed
-                </td>
-                <td>
-                    3
-                </td>
-                <td>
-                    30 min
-                </td>
-                <td>
-                    5:00 pm
-                </td>
-                <td>
-                    phone
-                </td>
-                <td>
-                    ...
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    
+
     <script src="script.js"></script>
 </body>
 
